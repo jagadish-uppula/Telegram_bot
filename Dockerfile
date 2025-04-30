@@ -10,9 +10,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Create and switch to Choreo-compliant user (UID between 10000-20000)
-RUN useradd -u 10014 -m choreouser && \
+RUN useradd -u 15000 -m choreouser && \
     chown -R choreouser:choreouser /app
-USER 10014  # Explicitly set the UID
+USER 15000  # Explicitly set the UID
 
 # Run the application
 CMD ["python", "bot.py"]
